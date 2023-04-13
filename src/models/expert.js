@@ -34,7 +34,7 @@ const expertsSchema = mongoose.Schema({
     required: true,
   },
   mobileNumber: {
-    type: Number,
+    type: String,
   },
   profilepic: {
     type: String,

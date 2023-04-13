@@ -51,6 +51,9 @@ const patchExpertData = (id, data) => {
     }
   );
 };
+const getAllLocations = () => {
+  return Expert.distinct('location');
+};
 
 module.exports = {
   registerNewExpert,
@@ -59,4 +62,5 @@ module.exports = {
   filterExperBySpecialization,
   filterExpertByLocation,
   patchExpertData,
+  getAllLocations,
 };

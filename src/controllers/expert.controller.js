@@ -21,6 +21,14 @@ const allExperts = async (req, res) => {
     res.json(error.message);
   }
 };
+const getAllLocations = async (req, res) => {
+  try {
+    const allLocations = await expertService.getAllLocations();
+    res.status(200).json(allLocations);
+  } catch (error) {
+    res.json(error.message);
+  }
+};
 const filterExperts = async (req, res, next) => {
   try {
     if (req.query.action !== 'filter') {
@@ -82,4 +90,5 @@ module.exports = {
   allExperts,
   filterExperts,
   connectToExpert,
+  getAllLocations,
 };
