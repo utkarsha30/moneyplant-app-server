@@ -11,9 +11,10 @@ const expertsSchema = mongoose.Schema({
     unique: true,
   },
   rating: {
-    totalRating: Number,
-
-    totalReviews: Number,
+    type: Number,
+  },
+  reviews: {
+    type: Number,
   },
   location: {
     city: String,
