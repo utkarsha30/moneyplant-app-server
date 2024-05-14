@@ -12,7 +12,9 @@ app.use(cors({ origin: '*' }));
 //for request body data
 app.use(express.json());
 
-app.use(express.static(path.join(process.cwd(),'public')));
+const clientPath = path.join(__dirname, '../public');
+app.use(express.static(clientPath));
+console.log(clientPath);
 
 app.get('/', (req, res) => {
   res.send(
@@ -33,7 +35,7 @@ app.use('/api',function(error,req,res,next){
   });
 });
 app.use(function(req,res,next){
-  res.sendFile(path.join(process.cwd(),'public','index.html'));
+  res.sendFile(path.join(clientPath,'index.html'));
 })
 const PORT = process.env.PORT || 5001;
 connect()
