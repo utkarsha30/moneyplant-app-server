@@ -14,6 +14,7 @@ app.use(express.json());
 
 // Serve static files from the 'client' directory
 app.use(express.static(path.join(process.cwd(), 'client')));
+console.log(path.join(process.cwd(), 'client'));
 
 app.get('/', (req, res) => {
   res.send(
