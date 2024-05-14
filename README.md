@@ -26,11 +26,9 @@ To run this project locally, follow these steps:
  Angular CLI installed
  MongoDB instance running
 2. Clone the Repository
-   
    ```sh
    git clone https://github.com/utkarsha30/moneyplant-app-server.git
-
-   ```sh
+   
    cd moneyplant-app-server
 4. Install Dependencies
    ```sh
