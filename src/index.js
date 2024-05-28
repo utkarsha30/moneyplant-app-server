@@ -16,7 +16,7 @@ const clientPath = path.join(__dirname, '../public');
 app.use(express.static(clientPath));
 console.log(clientPath);
 
-app.get('/', (req, res) => {
+app.get('/api', (req, res) => {
   res.send(
     '<div style="width:200px; margin: auto auto;"><img width="100%"  src="https://media.tenor.com/2jd3xi2WVt0AAAAC/recurring-settings.gif"></div><div style="width:220px; margin: 0 auto;"><h2>Server is Running...</h2></div>'
   );
